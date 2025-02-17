@@ -23,9 +23,9 @@ public class Cliente {
         if (cliente == null) {
             throw new NullPointerException("No es posible copiar un cliente nulo.");
         }
-        setNombre(cliente.nombre);
-        setDni(cliente.dni);
-        setTelefono(cliente.telefono);
+        nombre = (cliente.nombre);
+        dni = (cliente.dni);
+        telefono = (cliente.telefono);
     }
 
     /**4º CREAMOS EL METODO GET NOMBRE PARA OBTENER UN NOMBRE**/
