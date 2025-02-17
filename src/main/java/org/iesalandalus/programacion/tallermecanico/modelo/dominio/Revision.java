@@ -1,7 +1,5 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;

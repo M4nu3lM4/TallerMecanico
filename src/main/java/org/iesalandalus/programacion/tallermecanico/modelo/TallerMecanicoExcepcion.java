@@ -1,7 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.modelo;
 
-public class TallerMecanicoExcepcion extends Exception {
-    public TallerMecanicoExcepcion(String message) {
-        super(message);
-    }
+public class TallerMecanicoExcepcion extends RuntimeException {
+  public TallerMecanicoExcepcion(String message) {
+    super(message);
+  }
 }
