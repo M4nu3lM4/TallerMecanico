@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Readme enunciado corregido">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Clase Revision creada">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" afterDir="false" />
@@ -95,6 +95,7 @@
     "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
     "JUnit.ClienteTest.constructorNombreNoValidoDniValidoTelefonoValidoLanzaExcepcion.executor": "Run",
     "JUnit.ClienteTest.executor": "Run",
+    "JUnit.RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente.executor": "Run",
     "JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.executor": "Run",
@@ -123,7 +124,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -140,7 +141,7 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RevisionTest">
+  <component name="RunManager" selected="JUnit.RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion">
     <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -168,6 +169,22 @@
       <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
+      <option name="METHOD_NAME" value="constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,35 +221,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehiculoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion" />
       <item itemvalue="JUnit.ClienteTest" />
       <item itemvalue="JUnit.RevisionTest" />
       <item itemvalue="JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" />
       <item itemvalue="JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion" />
-      <item itemvalue="JUnit.VehiculoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion" />
         <item itemvalue="JUnit.RevisionTest" />
         <item itemvalue="JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion" />
         <item itemvalue="JUnit.ClienteTest" />
         <item itemvalue="JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" />
-        <item itemvalue="JUnit.VehiculoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739534431062</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Clase Revision creada">
+      <option name="closed" value="true" />
+      <created>1739778581438</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739778581438</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -314,7 +324,8 @@
     <MESSAGE value="Continuo empezando la clase vehiculo" />
     <MESSAGE value="Termine la Clase Vehiculo fue dificil los ER, comienzo de la clase Revision" />
     <MESSAGE value="Readme enunciado corregido" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme enunciado corregido" />
+    <MESSAGE value="Clase Revision creada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clase Revision creada" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

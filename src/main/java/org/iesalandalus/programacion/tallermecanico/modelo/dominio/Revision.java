@@ -5,12 +5,13 @@ import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.time.temporal.ChronoUnit;
 
 public class Revision {
     private static final float PRECIO_HORA = 30;
     private static final float PRECIO_DIA = 10;
     private static final float PRECIO_MATERIAL = 1.5f;
-    public static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private Cliente cliente;
     private Vehiculo vehiculo;
     private LocalDate fechaInicio;
@@ -21,12 +22,12 @@ public class Revision {
     public Revision(Cliente cliente, Vehiculo vehiculo, LocalDate fechaInicio) {
         setCliente(cliente);
         setVehiculo(vehiculo);
-        setFechaInicio(fechaInicio);
+        this.fechaInicio = fechaInicio;
     }
 
 
     public Revision(Revision revision) {
-        Objects.requireNonNull(revision,"No puedo copiar una revision nula.");
+        Objects.requireNonNull(revision,"La revision no puede revision nula.");
         setCliente(revision.cliente);
         setVehiculo(revision.vehiculo);
         setFechaInicio(revision.fechaInicio);
