@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Clase clientes terminada con los test superados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Vehiculos.java" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Clase Vehiculos terminada con los test superados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/VehiculosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/VehiculosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/RevisionesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/RevisionesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +102,7 @@
     "JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.executor": "Run",
     "JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
+    "JUnit.RevisionesTest.executor": "Run",
     "JUnit.VehiculoTest.constructorMarcaNulaModeloValidoMatrivaValidaLanzaExcepcion.executor": "Run",
     "JUnit.VehiculoTest.executor": "Run",
     "JUnit.VehiculosTest.executor": "Run",
@@ -143,7 +146,7 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VehiculosTest">
+  <component name="RunManager" selected="JUnit.VehiculoTest">
     <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -174,17 +177,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RevisionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RevisionesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.RevisionesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -221,19 +223,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RevisionesTest" />
       <item itemvalue="JUnit.VehiculosTest" />
       <item itemvalue="JUnit.ClientesTest" />
       <item itemvalue="JUnit.ClienteTest" />
-      <item itemvalue="JUnit.RevisionTest" />
       <item itemvalue="JUnit.VehiculoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VehiculoTest" />
+        <item itemvalue="JUnit.RevisionesTest" />
         <item itemvalue="JUnit.VehiculosTest" />
         <item itemvalue="JUnit.ClienteTest" />
         <item itemvalue="JUnit.ClientesTest" />
-        <item itemvalue="JUnit.RevisionTest" />
-        <item itemvalue="JUnit.VehiculoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739885048073</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Clase Vehiculos terminada con los test superados">
+      <option name="closed" value="true" />
+      <created>1739885725990</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739885725990</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -376,7 +386,8 @@
     <MESSAGE value="Excepcion arreglada" />
     <MESSAGE value="Excepcion arreglada e importada correctamente" />
     <MESSAGE value="Clase clientes terminada con los test superados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clase clientes terminada con los test superados" />
+    <MESSAGE value="Clase Vehiculos terminada con los test superados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clase Vehiculos terminada con los test superados" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

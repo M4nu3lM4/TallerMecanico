@@ -68,18 +68,18 @@ public class Cliente {
         }
         this.telefono = telefono;
     }
-
+    /**10º CREAMOS EL METODO COMPROBAR LETRA DNI QUE COMPRUEBA SI LA LETRA DEL DNI ES CORRECTA**/
     private static boolean comprobarLetraDni(String dni) {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         int numero = Integer.parseInt(dni.substring(0, 8));
         char letraCalculada = letras.charAt(numero % 23);
         return dni.charAt(8) == letraCalculada;
     }
-
+    /**11º CREAMOS EL METODO GET CON DATOS DE PRUEBA PARA OBTENER UN CLIENTE CON DATOS FIJOS**/
     public static Cliente get(String dni) {
         return new Cliente("José", dni, "999999999");
     }
-
+    /**12º CREAMOS EL METODO COMPARAR CLIENTES PARA SABER SI SON IGUALES**/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -87,12 +87,12 @@ public class Cliente {
         Cliente cliente = (Cliente) o;
         return Objects.equals(dni, cliente.dni);
     }
-
+    /**13º CREAMOS EL METODO GET HASHCODE PARA CALCULAR EL HASHCODE DE UN CLIENTE**/
     @Override
     public int hashCode() {
         return Objects.hash(dni);
     }
-
+    /**14º CREAMOS EL METODO TO STRING PARA OBTENER UN STRING CON LOS DATOS DEL CLIENTE**/
     @Override
     public String toString() {
         return String.format("%s - %s (%s)", nombre, dni, telefono);
