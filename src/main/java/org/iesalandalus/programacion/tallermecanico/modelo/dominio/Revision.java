@@ -123,7 +123,7 @@ public class Revision {
         return (float) (this.horas * PRECIO_HORA +getDias() * PRECIO_DIA + getPrecioMaterial() * PRECIO_MATERIAL);
     }
     /**19º CREAMOS EL METODO GETDIAS**/
-    public float getDias(){
+    private float getDias(){
         if(fechaFin == null){
             return 0;
         }
