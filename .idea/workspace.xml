@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Comienzo de clase Revisiones">
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Pequeña correcion en Revision y continuacion de Revisiones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +101,7 @@
     &quot;JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.RevisionesTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.VehiculoTest.constructorMarcaNulaModeloValidoMatrivaValidaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.VehiculoTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.VehiculosTest.executor&quot;: &quot;Run&quot;,
@@ -146,7 +146,7 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion">
+  <component name="RunManager" selected="JUnit.RevisionesTest">
     <configuration name="RevisionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -226,17 +226,17 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.RevisionTest" />
-      <item itemvalue="JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion" />
-      <item itemvalue="JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
       <item itemvalue="JUnit.RevisionesTest" />
+      <item itemvalue="JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
+      <item itemvalue="JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion" />
       <item itemvalue="JUnit.VehiculoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion" />
         <item itemvalue="JUnit.RevisionesTest" />
-        <item itemvalue="JUnit.RevisionTest" />
         <item itemvalue="JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
+        <item itemvalue="JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion" />
+        <item itemvalue="JUnit.RevisionTest" />
         <item itemvalue="JUnit.VehiculoTest" />
       </list>
     </recent_temporary>
@@ -378,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739905518093</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Pequeña correcion en Revision y continuacion de Revisiones">
+      <option name="closed" value="true" />
+      <created>1740054528062</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740054528062</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -398,7 +406,8 @@
     <MESSAGE value="Clase clientes terminada con los test superados" />
     <MESSAGE value="Clase Vehiculos terminada con los test superados" />
     <MESSAGE value="Comienzo de clase Revisiones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comienzo de clase Revisiones" />
+    <MESSAGE value="Pequeña correcion en Revision y continuacion de Revisiones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequeña correcion en Revision y continuacion de Revisiones" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
