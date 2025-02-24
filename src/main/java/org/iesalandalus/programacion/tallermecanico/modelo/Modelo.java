@@ -26,7 +26,7 @@ public class Modelo {
     }
 
     public void terminar() {
-        // No hace nada, según el test
+        System.out.println("Modelo terminado.");
     }
 
     public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {

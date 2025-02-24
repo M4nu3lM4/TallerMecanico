@@ -52,16 +52,16 @@ public class Revision {
     public Vehiculo getVehiculo() {
         return this.vehiculo;
     }
-    /**7º CREAMOS EL METODO SETVEHICULO**/
+    /**7º CREAMOS EL METODO SET VEHICULO**/
     public void setVehiculo(Vehiculo vehiculo) {
         Objects.requireNonNull(vehiculo, "El vehículo no puede ser nulo.");
         this.vehiculo = vehiculo;
     }
-    /**8º CREAMOS EL METODO GETFECHAINICIO**/
+    /**8º CREAMOS EL METODO GET FECHAINICIO**/
     public LocalDate getFechaInicio() {
         return this.fechaInicio;
     }
-    /**9º CREAMOS EL METODO SETFECHAINICIO**/
+    /**9º CREAMOS EL METODO SET FECHAINICIO**/
     public void setFechaInicio(LocalDate fechaInicio) {
         Objects.requireNonNull(fechaInicio, "La fecha de inicio no puede ser nula.");
         this.fechaInicio = fechaInicio;
@@ -96,6 +96,7 @@ public class Revision {
     /**15º CREAMOS EL METODO ANADIRPRECIOMATERIAL**/
     public void anadirPrecioMaterial(float precioMaterial) throws TallerMecanicoExcepcion {
         if(precioMaterial <= 0) throw new IllegalArgumentException("El precio del material a añadir debe ser mayor que cero.");
+
         if(fechaFin != null) throw new TallerMecanicoExcepcion("No se puede añadir precio del material, ya que la revisión está cerrada.");
         this.precioMaterial += precioMaterial;
     }
