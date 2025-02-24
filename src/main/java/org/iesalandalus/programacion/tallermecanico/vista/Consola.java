@@ -12,6 +12,6 @@ public class Consola {
         System.out.println();
     }
     public static void mostrarMenu(){
-        mostrarMenu();
+        Consola.mostrarCabecera();
     }
 }
