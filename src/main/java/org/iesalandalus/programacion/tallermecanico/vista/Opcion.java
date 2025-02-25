@@ -1,7 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.vista;
 
 import java.util.Map;
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public enum Opcion {
     INSERTAR_CLIENTE(1, "Insertar Cliente"),
@@ -26,7 +26,7 @@ public enum Opcion {
 
     private final int numeroOpcion;
     private final String mensaje;
-    private static final Map<Integer, Opcion> opciones = new HashMap<>();
+    private static final Map<Integer, Opcion> opciones = new TreeMap<>();
 
     static {
         for (Opcion opcion : values()) {
