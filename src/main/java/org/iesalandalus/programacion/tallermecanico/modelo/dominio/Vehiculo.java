@@ -52,7 +52,7 @@ public record Vehiculo(String marca, String modelo, String matricula) {
         if(!matricula.matches(ER_MATRICULA)) {
             throw new IllegalArgumentException("La matrícula no tiene un formato válido.");
         }
-        return new Vehiculo("Desconocido", "Desconocido", matricula);
+        return new Vehiculo("Renault", "Megane", matricula);
     }
 
     @Override

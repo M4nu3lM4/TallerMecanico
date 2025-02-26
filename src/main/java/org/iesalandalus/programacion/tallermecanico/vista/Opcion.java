@@ -4,25 +4,25 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public enum Opcion {
-    INSERTAR_CLIENTE(1, "Insertar Cliente"),
-    BUSCAR_CLIENTE(2, "Buscar Cliente"),
-    BORRAR_CLIENTE(3, "Borrar Cliente"),
-    LISTAR_CLIENTES(4, "Listar Clientes"),
-    MODIFICAR_CLIENTE(5, "Modificar Cliente"),
-    INSERTAR_VEHICULO(6, "Insertar Vehículo"),
-    BUSCAR_VEHICULO(7, "Buscar Vehículo"),
-    BORRAR_VEHICULO(8, "Borrar Vehículo"),
-    LISTAR_VEHICULOS(9, "Listar Vehículos"),
-    INSERTAR_REVISION(10, "Insertar Revisión"),
-    BUSCAR_REVISION(11, "Buscar Revisión"),
-    BORRAR_REVISION(12, "Borrar Revisión"),
-    LISTAR_REVISIONES(13, "Listar Revisiones"),
-    LISTAR_REVISIONES_CLIENTE(14, "Listar Revisiones por Cliente"),
-    LISTAR_REVISIONES_VEHICULO(15, "Listar Revisiones por Vehículo"),
-    ANADIR_HORAS_REVISION(16, "Añadir Horas a Revisión"),
-    ANADIR_PRECIO_MATERIAL_REVISION(17, "Añadir Precio de Material a Revisión"),
-    CERRAR_REVISION(18, "Cerrar Revisión"),
-    SALIR(0, "Salir");
+    INSERTAR_CLIENTE(0, "Insertar Cliente"),
+    BUSCAR_CLIENTE(1, "Buscar Cliente"),
+    BORRAR_CLIENTE(2, "Borrar Cliente"),
+    LISTAR_CLIENTES(3, "Listar Clientes"),
+    MODIFICAR_CLIENTE(4, "Modificar Cliente"),
+    INSERTAR_VEHICULO(5, "Insertar Vehículo"),
+    BUSCAR_VEHICULO(6, "Buscar Vehículo"),
+    BORRAR_VEHICULO(7, "Borrar Vehículo"),
+    LISTAR_VEHICULOS(8, "Listar Vehículos"),
+    INSERTAR_REVISION(9, "Insertar Revisión"),
+    BUSCAR_REVISION(10, "Buscar Revisión"),
+    BORRAR_REVISION(11, "Borrar Revisión"),
+    LISTAR_REVISIONES(12, "Listar Revisiones"),
+    LISTAR_REVISIONES_CLIENTE(13, "Listar Revisiones por Cliente"),
+    LISTAR_REVISIONES_VEHICULO(14, "Listar Revisiones por Vehículo"),
+    ANADIR_HORAS_REVISION(15, "Añadir Horas a Revisión"),
+    ANADIR_PRECIO_MATERIAL_REVISION(16, "Añadir Precio de Material a Revisión"),
+    CERRAR_REVISION(17, "Cerrar Revisión"),
+    SALIR(18, "Salir");
 
     private final int numeroOpcion;
     private final String mensaje;
