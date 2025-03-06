@@ -7,16 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Clientes {
+    /**1º CREAMOS LA LISTA DE COLECCIONCLIENTES**/
     private final List<Cliente> coleccionClientes;
 
+    /**2º CREAMOS EL CONSTRUCTOR PARA INICIALIZAR LA LISTA**/
     public Clientes() {
         coleccionClientes = new ArrayList<>();
     }
 
+    /**3º CREAMOS EL CONSTRUCTOR PARA OBTENER LA LISTA **/
     public List<Cliente> get() {
         return new ArrayList<>(coleccionClientes);
     }
-
+    /**4º CREAMOS EL CONSTRUCTOR INSERTAR PARA AÑADIR UN CLIENTE A LA LISTA DE CLIENTES**/
     public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {
         if (cliente == null) {
             throw new NullPointerException("No se puede insertar un cliente nulo.");
@@ -26,7 +29,7 @@ public class Clientes {
         }
         coleccionClientes.add(cliente);
     }
-
+    /**5º CREAMOS EL CONSTRUCTOR MODIFICAR PARA MODIFICAR UN CLIENTE DE LA LISTA**/
     public Cliente modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
         if (cliente == null) {
             throw new NullPointerException("No se puede modificar un cliente nulo.");
@@ -43,7 +46,7 @@ public class Clientes {
         }
         return new Cliente(cliente);
     }
-
+    /**6º CREAMOS EL CONSTRUCTOR BUSCAR PARA PODER BUSCAR UN CLIENTE EN LA LISTA**/
     public Cliente buscar(Cliente cliente) {
         if (cliente == null) {
             throw new NullPointerException("No se puede buscar un cliente nulo.");
