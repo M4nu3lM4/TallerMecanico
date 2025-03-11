@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public record Vehiculo(String marca, String modelo, String matricula) {
 
+    /**1º CREAMOS LAS EXPRESIONES REGULARES DE LA MARCA Y LA MATRICULA**/
+
     private static final String ER_MARCA = "^(?!^\\s+$)([A-Z][A-Za-z]*|[A-Z][a-z]*(?:[-\\s]?[a-z]+)?(?:[-\\s][a-zA-Z][a-z]*)*|[A-Z]+)$";
 
     /**(?!^\s+$): Negative lookahead que asegura que la cadena no consista únicamente de espacios en blanco.
@@ -22,31 +24,32 @@ public record Vehiculo(String marca, String modelo, String matricula) {
 [BCDFGHJKLMNPRSTVWXYZ]{3}: Representa exactamente tres letras del alfabeto español, excluyendo las letras prohibidas y las combinaciones prohibidas.
      */
 
+    /**2º CREAMOS EL CONSTRUCTOR POR DEFECTO**/
     public Vehiculo {
         validarMarca(marca);
         validarModelo(modelo);
         validarMatricula(matricula);
     }
-
+    /**3º CREAMOS EL METODO VALIDAR MARCA PARA COMPROBAR QUE LA MARCA SEA VALIDA**/
     private void validarMarca(String marca) {
         Objects.requireNonNull(marca, "La marca no puede ser nula.");
         if(!marca.matches(ER_MARCA)) {
             throw new IllegalArgumentException("La marca no tiene un formato válido.");
         }
     }
-
+    /**4º CREAMOS EL METODO VALIDAR MODELO PARA COMPROBAR QUE EL MODELO SEA VALIDO**/
     private void  validarModelo(String modelo) {
         Objects.requireNonNull(modelo, "El modelo no puede ser nulo.");
         if(modelo.trim().isBlank()) throw new IllegalArgumentException("El modelo no puede estar en blanco.");
     }
-
+    /**5º CREAMOS EL METODO VALIDAR MATRICULA PARA COMPROBAR QUE LA MATRICULA SEA VALIDA**/
     private void validarMatricula(String matricula) {
         Objects.requireNonNull(matricula, "La matrícula no puede ser nula.");
         if(!matricula.matches(ER_MATRICULA)) {
             throw new IllegalArgumentException("La matrícula no tiene un formato válido.");
         }
     }
-
+    /**6º CREAMOS EL METODO GET PARA OBTENER EL VEHICULO**/
     public static Vehiculo get(String matricula){
         Objects.requireNonNull(matricula, "La matrícula no puede ser nula.");
         if(!matricula.matches(ER_MATRICULA)) {
