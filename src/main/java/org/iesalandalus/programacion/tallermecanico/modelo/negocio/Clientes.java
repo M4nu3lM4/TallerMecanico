@@ -59,7 +59,7 @@ public class Clientes {
         return null;
     }
 
-
+    /**7º CREAMOS EL CONSTRUCTOR BORRAR PARA PODER BORRAR UN CLIENTE DE LA LISTA**/
     public void borrar(Cliente cliente) throws TallerMecanicoExcepcion {
         if (cliente == null) {
             throw new NullPointerException("No se puede borrar un cliente nulo.");
