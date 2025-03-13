@@ -11,7 +11,7 @@ import java.time.format.DateTimeParseException;
 
 public class Consola {
     private static final String CADENA_FORMATO_FECHA = "dd/MM/yyyy";
-    private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
+
 
     private Consola() {
     }
@@ -44,17 +44,16 @@ public class Consola {
     }
 
     public static LocalDate leerFecha(String mensaje) {
-        LocalDate fecha = null;
-        do {
-            try {
-                System.out.print(mensaje);
-                String fechaString = Entrada.cadena();
-                fecha = LocalDate.parse(fechaString, FORMATO_FECHA);
-            } catch (DateTimeParseException e) {
-                System.out.println("Error: Formato de fecha incorrecto. Use el formato " + CADENA_FORMATO_FECHA);
-            }
-        } while (fecha == null);
-        return fecha;
+       LocalDate fecha;
+       DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
+       mensaje = String.format("%s (%s): ",mensaje ,CADENA_FORMATO_FECHA);
+
+       try {
+           fecha = LocalDate.parse(leerCadena(mensaje),formatoFecha);
+       }catch (DateTimeParseException e){
+           fecha = null;
+       }
+       return fecha;
     }
 
     public static Opcion elegirOpcion() {
@@ -77,12 +76,12 @@ public class Consola {
         return Cliente.get(dni);
     }
 
-    public static String leerNombre() {
-        return leerCadena("Introduce el nombre: ");
+    public static String leerNuevoNombre() {
+        return leerCadena("Introduce el nuevo nombre: ");
     }
 
-    public static String leerTelefono() {
-        return leerCadena("Introduce el teléfono: ");
+    public static String leerNuevoTelefono() {
+        return leerCadena("Introduce el nuevo teléfono: ");
     }
 
     public static Vehiculo leerVehiculo() {

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Comentarios añadidos en Clientes">
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Clase opcion corregida y mejorada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Consola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Opcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Opcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -482,15 +484,48 @@
       <option name="project" value="LOCAL" />
       <updated>1741263613843</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Comentarios añadidos en Vehiculo">
+      <option name="closed" value="true" />
+      <created>1741698309337</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1741698309337</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Comentarios añadidos en Clientes">
+      <option name="closed" value="true" />
+      <created>1741698832318</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1741698832318</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Clase opcion corregida y mejorada">
+      <option name="closed" value="true" />
+      <created>1741772966152</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1741772966152</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Commit inicial con el enunciado, las dependencias y los tests." />
-    <MESSAGE value="Nombre modificado a readme" />
     <MESSAGE value="Termine la clase cliente" />
     <MESSAGE value="Continuo empezando la clase vehiculo" />
     <MESSAGE value="Termine la Clase Vehiculo fue dificil los ER, comienzo de la clase Revision" />
@@ -513,8 +548,10 @@
     <MESSAGE value="Clase Consola Terminada(por ahora)" />
     <MESSAGE value="Clase Opcion corregida" />
     <MESSAGE value="todas las clases hechas, queda corregirlas" />
+    <MESSAGE value="Comentarios añadidos en Vehiculo" />
     <MESSAGE value="Comentarios añadidos en Clientes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios añadidos en Clientes" />
+    <MESSAGE value="Clase opcion corregida y mejorada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clase opcion corregida y mejorada" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
