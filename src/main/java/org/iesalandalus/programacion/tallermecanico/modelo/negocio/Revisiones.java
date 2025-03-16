@@ -10,13 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Revisiones {
-
+    /**1º CREAMOS LA LISTA coleccionRevisiones**/
     private final List<Revision> coleccionRevisiones;
 
+    /**2º CREAMOS EL METODO REVISIONES PARA INICIAR LA LISTA**/
     public Revisiones() {
         coleccionRevisiones = new ArrayList<>();
     }
-
+    /**3º CREAMOS EL METODO GET PARA OBTENER LA LISTA**/
     public List<Revision> get() {
         return new ArrayList<>(coleccionRevisiones);
     }
@@ -40,7 +41,7 @@ public class Revisiones {
         }
         return revisionesVehiculo;
     }
-
+    /**6º CREAMOS EL METODO INSERTAR PARA AÑADIR UNA REVISION A LA LISTA**/
     public void insertar(Revision revision) throws TallerMecanicoExcepcion {
         if (revision == null) {
             throw new NullPointerException("No se puede insertar una revisión nula.");
@@ -48,7 +49,7 @@ public class Revisiones {
         comprobarRevision(revision.getCliente(), revision.getVehiculo(), revision.getFechaInicio());
         coleccionRevisiones.add(revision);
     }
-
+    /**7º CREAMOS EL METODO COMPROBARREVISION PARA SABER SI HAY UNA REVISION EN LA LISTA**/
     private void comprobarRevision(Cliente cliente, Vehiculo vehiculo, LocalDate fechaRevision)throws TallerMecanicoExcepcion{
         for(Revision r : coleccionRevisiones){
             if(!r.estaCerrada()) {
@@ -71,13 +72,13 @@ public class Revisiones {
         }
 
     }
-
+    /**8º CREAMOS EL METODO AÑADIR HORAS PARA SUMAR HORAS A LAS REVISIONES**/
     public void anadirHoras(Revision revision, int horas) throws TallerMecanicoExcepcion {
         Revision revision1 = getRevision(revision);
         revision1.anadirHoras(horas);
 
     }
-
+    /**9º CREAMOS EL METODO GETrEVISION PARA OBTENER LA REVISION**/
     private Revision getRevision(Revision revision) throws TallerMecanicoExcepcion {
         if (revision == null) {
             throw new NullPointerException("No puedo operar sobre una revisión nula.");
@@ -88,13 +89,13 @@ public class Revisiones {
         }
         return revisionExistente;
     }
-
+    /**10º CREAMOS EL METODO AÑAÑDIR PRECIO MATERIAL PARA SUMAR PRECIO A LA REVISION**/
     public void anadirPrecioMaterial(Revision revision, float precioMaterial) throws TallerMecanicoExcepcion {
         Revision revision1 = getRevision(revision);
         revision1.anadirPrecioMaterial(precioMaterial);
 
     }
-
+    /**11º CREAMOS EL METODO CERRAR PARA PONER FIN A LA REVISION**/
     public void cerrar(Revision revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
         if (revision == null) {
             throw new NullPointerException("No puedo operar sobre una revisión nula.");
@@ -105,7 +106,7 @@ public class Revisiones {
         }
         revisionExistente.cerrar(fechaFin);
     }
-
+    /**12 CREAMOS EL METODO BORRAR PARA ELIMINAR UNA REVISION**/
     public void borrar(Revision revision) throws TallerMecanicoExcepcion {
         if (revision == null) {
             throw new NullPointerException("No se puede borrar una revisión nula.");
