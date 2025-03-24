@@ -89,7 +89,7 @@ public class Revisiones {
         }
         return revisionExistente;
     }
-    /**10º CREAMOS EL METODO AÑAÑDIR PRECIO MATERIAL PARA SUMAR PRECIO A LA REVISION**/
+    /**10º CREAMOS EL METODO AÑADIR PRECIO MATERIAL PARA SUMAR PRECIO A LA REVISION**/
     public void anadirPrecioMaterial(Revision revision, float precioMaterial) throws TallerMecanicoExcepcion {
         Revision revision1 = getRevision(revision);
         revision1.anadirPrecioMaterial(precioMaterial);
