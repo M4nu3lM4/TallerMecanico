@@ -3,9 +3,9 @@ package org.iesalandalus.programacion.tallermecanico.modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Clientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Vehiculos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Revisiones;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class Modelo {
     private Clientes clientes;
     private Vehiculos vehiculos;
-    private Revisiones revisiones;
+    private Trabajos revisiones;
 
     public Modelo() {
         comenzar();
@@ -22,7 +22,7 @@ public class Modelo {
     public void comenzar() {
         this.clientes = new Clientes();
         this.vehiculos = new Vehiculos();
-        this.revisiones = new Revisiones();
+        this.revisiones = new Trabajos();
     }
 
     public void terminar() {
