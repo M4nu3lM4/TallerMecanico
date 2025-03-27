@@ -8,9 +8,6 @@ import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Mecanico;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,10 +20,10 @@ public class ModeloCascada implements IModelo {
 
     public ModeloCascada(FabricaFuenteDatos fabricaFuenteDatos) {
         Objects.requireNonNull(fabricaFuenteDatos,"La factoria de la fuente de datos no puede ser nula.");
-        IFuenteDatosMemoria fuenteDatosMemoria = fabricaFuenteDatos.crear();
-        clientes = fuenteDatosMemoria.crearClientes();
-        vehiculos = fuenteDatosMemoria.crearVehiculos();
-        trabajos = fuenteDatosMemoria.crearTrabajos();
+        IFuenteDatos fuenteDatos = fabricaFuenteDatos.crear();
+        clientes = fuenteDatos.crearClientes();
+        vehiculos = fuenteDatos.crearVehiculos();
+        trabajos = fuenteDatos.crearTrabajos();
     }
 
     @Override
