@@ -7,30 +7,31 @@ import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Mecanico;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 public class ModeloCascada implements IModelo {
     private IClientes clientes;
     private IVehiculos vehiculos;
     private ITrabajos trabajos;
 
-    public ModeloCascada() {
-        comenzar();
+    public ModeloCascada(FabricaFuenteDatos fabricaFuenteDatos) {
+        Objects.requireNonNull(fabricaFuenteDatos,"La factoria de la fuente de datos no puede ser nula.");
+        IFuenteDatosMemoria fuenteDatosMemoria = fabricaFuenteDatos.crear();
+        clientes = fuenteDatosMemoria.crearClientes();
+        vehiculos = fuenteDatosMemoria.crearVehiculos();
+        trabajos = fuenteDatosMemoria.crearTrabajos();
     }
 
     @Override
     public void comenzar() {
-        this.clientes = new Clientes();
-        this.vehiculos = new Vehiculos();
-        this.trabajos = new Trabajos();
+        System.out.println("Modelo comenzado");
     }
 
     @Override
@@ -58,8 +59,6 @@ public class ModeloCascada implements IModelo {
             } else if (trabajo instanceof Mecanico) {
                 trabajos.insertar(new Mecanico((Mecanico) trabajo));
             }
-        } else {
-            throw new TallerMecanicoExcepcion("El cliente o el vehículo no existen");
         }
     }
 
@@ -91,17 +90,17 @@ public class ModeloCascada implements IModelo {
     }
 
     @Override
-    public void anadirHoras(Trabajo trabajo, int horas) throws TallerMecanicoExcepcion {
+    public void anadirHoras(Trabajo trabajo, int horas)throws TallerMecanicoExcepcion {
         trabajos.anadirHoras(trabajo, horas);
     }
 
     @Override
     public void anadirPrecioMaterial(Trabajo trabajo, float precioMaterial) throws TallerMecanicoExcepcion {
-        if (trabajo instanceof Mecanico) {
-            trabajos.anadirPrecioMaterial(trabajo, precioMaterial);
-        } else {
+        if ((trabajo instanceof Mecanico)) {
             throw new TallerMecanicoExcepcion("Solo se puede añadir precio de material a trabajos mecánicos");
         }
+            trabajos.anadirPrecioMaterial(trabajo, precioMaterial);
+
     }
 
     @Override

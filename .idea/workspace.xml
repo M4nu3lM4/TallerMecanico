@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Adecuacion de dominio hecho y test superados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/FabricaModelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/IModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="mejora de build gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/uml/tallerMecanico.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/uml/tallerMecanico.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/FabricaModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/FabricaModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +96,8 @@
     "JUnit.ClienteTest.executor": "Run",
     "JUnit.ClientesTest.executor": "Run",
     "JUnit.MecanicoTest.executor": "Run",
+    "JUnit.ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial.executor": "Run",
+    "JUnit.ModeloTest.buscarTrabajoLlamaTrabajosBuscar.executor": "Run",
     "JUnit.ModeloTest.executor": "Run",
     "JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioNoValidaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente.executor": "Run",
@@ -165,32 +159,34 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MecanicoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision" />
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.MecanicoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
+      <option name="METHOD_NAME" value="anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RevisionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModeloTest.buscarTrabajoLlamaTrabajosBuscar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision" />
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
+      <option name="METHOD_NAME" value="buscarTrabajoLlamaTrabajosBuscar" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,19 +237,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial" />
+      <item itemvalue="JUnit.ModeloTest.buscarTrabajoLlamaTrabajosBuscar" />
       <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo.dominio in TallerMecanico.test" />
-      <item itemvalue="JUnit.MecanicoTest" />
       <item itemvalue="JUnit.TrabajoTest" />
       <item itemvalue="JUnit.TrabajoTest.cerrarFechaFinNulaLanzaExcepcion" />
-      <item itemvalue="JUnit.RevisionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ModeloTest.buscarTrabajoLlamaTrabajosBuscar" />
+        <item itemvalue="JUnit.ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial" />
         <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo.dominio in TallerMecanico.test" />
         <item itemvalue="JUnit.TrabajoTest.cerrarFechaFinNulaLanzaExcepcion" />
         <item itemvalue="JUnit.TrabajoTest" />
-        <item itemvalue="JUnit.MecanicoTest" />
-        <item itemvalue="JUnit.RevisionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742982941059</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mejora de build gradle">
+      <option name="closed" value="true" />
+      <created>1743076595449</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743076595449</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +341,8 @@
     <MESSAGE value="Errata en el enunciado y en el diagrama." />
     <MESSAGE value="Dominio hecho y test superados" />
     <MESSAGE value="Adecuacion de dominio hecho y test superados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adecuacion de dominio hecho y test superados" />
+    <MESSAGE value="mejora de build gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejora de build gradle" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
