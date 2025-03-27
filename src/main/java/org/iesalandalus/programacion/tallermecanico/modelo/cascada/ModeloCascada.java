@@ -28,7 +28,7 @@ public class ModeloCascada implements IModelo {
 
     @Override
     public void comenzar() {
-        System.out.println("Modelo comenzado");
+        System.out.println("Modelo comenzado.");
     }
 
     @Override
