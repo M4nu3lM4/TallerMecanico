@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.cascada;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.IModelo;
+import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-public class ModeloCascada implements IModelo {
+public class ModeloCascada implements Modelo {
     private IClientes clientes;
     private IVehiculos vehiculos;
     private ITrabajos trabajos;

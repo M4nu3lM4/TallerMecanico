@@ -6,10 +6,10 @@ import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuente
 public enum FabricaModelo {
     CASCADA {
         @Override
-        public IModelo crear(FabricaFuenteDatos fabricaFuenteDatos) {
+        public Modelo crear(FabricaFuenteDatos fabricaFuenteDatos) {
             return new ModeloCascada(fabricaFuenteDatos);
         }
     };
 
-    public abstract IModelo crear(FabricaFuenteDatos fabricaFuenteDatos);
+    public abstract Modelo crear(FabricaFuenteDatos fabricaFuenteDatos);
 }
