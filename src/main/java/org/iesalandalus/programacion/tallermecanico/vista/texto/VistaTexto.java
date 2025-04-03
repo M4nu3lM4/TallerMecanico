@@ -33,10 +33,11 @@ public class VistaTexto implements Vista {
         }while (opcion != Evento.SALIR);
     }
 
-    @Override
-    public void ejecutar(Evento opcion) {
+
+    private void ejecutar(Evento opcion) {
         Consola.mostrarCabecera(opcion.toString());
         gestorEventos.notificar(opcion);
+
     }
 
     @Override
@@ -120,7 +121,11 @@ public class VistaTexto implements Vista {
 
     @Override
     public void notificarResultado(Evento evento, String texto, boolean exito) {
-        System.out.println(exito ? "ÉXITO: " : "ERROR: " + texto);
+        if (exito) {
+            System.out.println("Operación realizada con éxito: " + texto);
+        } else {
+            System.out.println("Error en la operación: " + texto);
+        }
     }
 
     @Override

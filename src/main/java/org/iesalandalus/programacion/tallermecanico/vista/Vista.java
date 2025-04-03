@@ -15,7 +15,7 @@ public interface Vista {
 
     void comenzar();
 
-    void ejecutar(Evento opcion);
+
 
     void terminar();
 

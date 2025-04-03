@@ -65,7 +65,7 @@ public class Consola {
             try{
                 opcion = Evento.get(leerEntero("\nElija una opcion: "));
             }catch (IllegalArgumentException e){
-                System.out.println("ERROR: %s%n" + e.getMessage());
+                System.out.println("ERROR: " + e.getMessage());
             }
         }while (opcion == null);
         return opcion;
