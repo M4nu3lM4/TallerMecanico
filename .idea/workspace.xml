@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Tarea terminada añado comentarios">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Corrección de dependencia en diagrama de clases." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,16 +46,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Exception" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ficheros" />
+        <entry key="$PROJECT_DIR$" value="sprint_inicial" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,8 +68,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/M4nu3lM4/TallerMecanico.git&quot;,
-    &quot;accountId&quot;: &quot;930cdd4c-7811-42cb-a5ea-c5b0d17a076d&quot;
+    &quot;url&quot;: &quot;https://github.com/JRJimenezReyes/TallerMecanico.git&quot;,
+    &quot;accountId&quot;: &quot;7afb4187-7209-404d-b356-a4a604097a01&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -86,54 +84,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Gradle.Build TallerMecanico.executor": "Run",
-    "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
-    "JUnit.ClienteTest.constructorNombreNoValidoDniValidoTelefonoValidoLanzaExcepcion.executor": "Run",
-    "JUnit.ClienteTest.executor": "Run",
-    "JUnit.ClientesTest.executor": "Run",
-    "JUnit.ModeloTest.buscarRevisionLlamaRevisionesBuscar.executor": "Run",
-    "JUnit.ModeloTest.executor": "Run",
-    "JUnit.RevisionTest.constructorClienteNuloTurismoValidoFechaInicioValidaLanzaExcepcion.executor": "Run",
-    "JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente.executor": "Run",
-    "JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion.executor": "Run",
-    "JUnit.RevisionTest.executor": "Run",
-    "JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
-    "JUnit.RevisionesTest.executor": "Run",
-    "JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion.executor": "Run",
-    "JUnit.RevisionesTest.insertarRevisionVehiculoRevisionAnteriorLanzaExcepcion.executor": "Run",
-    "JUnit.VehiculoTest.constructorMarcaNulaModeloValidoMatrivaValidaLanzaExcepcion.executor": "Run",
-    "JUnit.VehiculoTest.executor": "Run",
-    "JUnit.VehiculosTest.executor": "Run",
-    "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
-    "RunOnceActivity.ChatTagsLlmMigration": "true",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
-    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.codeium.enabled": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/manum/Downloads/Práctica 4.h/Idea",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build TallerMecanico.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pepino/Desarrollos/java/IntelliJ/Copias-TallerMecanico/TallerMecanico&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio" />
@@ -148,34 +127,30 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.Main" />
-      <module name="TallerMecanico.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'">
+    <configuration name="Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.iesalandalus.programacion.tallermecanico.modelo.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="ModeloTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
@@ -187,28 +162,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
       <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModeloTest.buscarRevisionLlamaRevisionesBuscar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
-      <option name="METHOD_NAME" value="buscarRevisionLlamaRevisionesBuscar" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehiculoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RevisionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -217,26 +177,54 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanicoResuelto.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.ClienteTest" />
+      <item itemvalue="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" />
+      <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" />
+      <item itemvalue="JUnit.RevisionTest" />
       <item itemvalue="JUnit.ModeloTest" />
-      <item itemvalue="JUnit.ModeloTest.buscarRevisionLlamaRevisionesBuscar" />
-      <item itemvalue="JUnit.VehiculoTest" />
+      <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VehiculoTest" />
-        <item itemvalue="JUnit.ModeloTest.buscarRevisionLlamaRevisionesBuscar" />
+        <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" />
         <item itemvalue="JUnit.ModeloTest" />
-        <item itemvalue="JUnit.ClienteTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.RevisionTest" />
+        <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" />
+        <item itemvalue="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" />
       </list>
     </recent_temporary>
   </component>
@@ -265,314 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739183845414</updated>
     </task>
-    <task id="LOCAL-00003" summary="Nombre modificado a readme">
-      <option name="closed" value="true" />
-      <created>1739351811064</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1739351811064</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Termine la clase cliente">
-      <option name="closed" value="true" />
-      <created>1739379702964</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1739379702964</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Continuo empezando la clase vehiculo">
-      <option name="closed" value="true" />
-      <created>1739381994766</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1739381994766</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Termine la Clase Vehiculo fue dificil los ER, comienzo de la clase Revision">
-      <option name="closed" value="true" />
-      <created>1739448570724</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1739448570724</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Readme enunciado corregido">
-      <option name="closed" value="true" />
-      <created>1739534431062</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1739534431062</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Clase Revision creada">
-      <option name="closed" value="true" />
-      <created>1739778581438</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1739778581438</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Clase Revision creada">
-      <option name="closed" value="true" />
-      <created>1739780265853</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1739780265853</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Clase revision terminada, ajustes del intelliJ modificados">
-      <option name="closed" value="true" />
-      <created>1739782108127</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1739782108127</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Excepcion arreglada">
-      <option name="closed" value="true" />
-      <created>1739782285391</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1739782285391</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Excepcion arreglada">
-      <option name="closed" value="true" />
-      <created>1739782314442</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1739782314442</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Excepcion arreglada e importada correctamente">
-      <option name="closed" value="true" />
-      <created>1739782779134</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1739782779134</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Clase clientes terminada con los test superados">
-      <option name="closed" value="true" />
-      <created>1739885048072</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1739885048073</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Clase Vehiculos terminada con los test superados">
-      <option name="closed" value="true" />
-      <created>1739885725990</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1739885725990</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Comienzo de clase Revisiones">
-      <option name="closed" value="true" />
-      <created>1739905518093</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1739905518093</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Pequeña correcion en Revision y continuacion de Revisiones">
-      <option name="closed" value="true" />
-      <created>1740054528062</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1740054528062</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Revisiones terminada">
-      <option name="closed" value="true" />
-      <created>1740139759197</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1740139759197</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Clase Revisiones terminada">
-      <option name="closed" value="true" />
-      <created>1740139987678</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1740139987678</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Clase Modelo terminada">
-      <option name="closed" value="true" />
-      <created>1740157225474</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1740157225474</updated>
-    </task>
-    <task id="LOCAL-00021" summary="enum opcion terminado">
-      <option name="closed" value="true" />
-      <created>1740158167809</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1740158167809</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Modelo,revision corregidos">
-      <option name="closed" value="true" />
-      <created>1740384628775</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1740384628775</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Opcion terminada">
-      <option name="closed" value="true" />
-      <created>1740385721541</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1740385721541</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Clase Consola Comenzada">
-      <option name="closed" value="true" />
-      <created>1740388424212</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1740388424212</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Clase Consola Terminada(por ahora)">
-      <option name="closed" value="true" />
-      <created>1740414947078</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1740414947078</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Clase Opcion corregida">
-      <option name="closed" value="true" />
-      <created>1740489358264</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1740489358264</updated>
-    </task>
-    <task id="LOCAL-00027" summary="todas las clases hechas, queda corregirlas">
-      <option name="closed" value="true" />
-      <created>1740560130553</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1740560130553</updated>
-    </task>
-    <task id="LOCAL-00028" summary="todas las clases hechas, queda corregirlas">
-      <option name="closed" value="true" />
-      <created>1740561540239</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1740561540239</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Comentarios añadidos en Clientes">
-      <option name="closed" value="true" />
-      <created>1741263613843</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1741263613843</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Comentarios añadidos en Vehiculo">
-      <option name="closed" value="true" />
-      <created>1741698309337</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1741698309337</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Comentarios añadidos en Clientes">
-      <option name="closed" value="true" />
-      <created>1741698832318</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1741698832318</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Clase opcion corregida y mejorada">
-      <option name="closed" value="true" />
-      <created>1741772966152</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1741772966152</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Tarea terminada">
-      <option name="closed" value="true" />
-      <created>1741870785076</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1741870785076</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Tarea terminada añado comentarios">
-      <option name="closed" value="true" />
-      <created>1742128940522</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1742128940522</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Tarea terminada añado comentarios">
-      <option name="closed" value="true" />
-      <created>1742373814813</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1742373814813</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Termine la Clase Vehiculo fue dificil los ER, comienzo de la clase Revision" />
-    <MESSAGE value="Readme enunciado corregido" />
-    <MESSAGE value="Clase Revision creada" />
-    <MESSAGE value="Clase revision terminada, ajustes del intelliJ modificados" />
-    <MESSAGE value="Excepcion arreglada" />
-    <MESSAGE value="Excepcion arreglada e importada correctamente" />
-    <MESSAGE value="Clase clientes terminada con los test superados" />
-    <MESSAGE value="Clase Vehiculos terminada con los test superados" />
-    <MESSAGE value="Comienzo de clase Revisiones" />
-    <MESSAGE value="Pequeña correcion en Revision y continuacion de Revisiones" />
-    <MESSAGE value="Revisiones terminada" />
-    <MESSAGE value="Clase Revisiones terminada" />
-    <MESSAGE value="Clase Modelo terminada" />
-    <MESSAGE value="enum opcion terminado" />
-    <MESSAGE value="Modelo,revision corregidos" />
-    <MESSAGE value="Opcion terminada" />
-    <MESSAGE value="Clase Consola Comenzada" />
-    <MESSAGE value="Clase Consola Terminada(por ahora)" />
-    <MESSAGE value="Clase Opcion corregida" />
-    <MESSAGE value="todas las clases hechas, queda corregirlas" />
-    <MESSAGE value="Comentarios añadidos en Vehiculo" />
-    <MESSAGE value="Comentarios añadidos en Clientes" />
-    <MESSAGE value="Clase opcion corregida y mejorada" />
-    <MESSAGE value="Tarea terminada" />
-    <MESSAGE value="Tarea terminada añado comentarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tarea terminada añado comentarios" />
+    <MESSAGE value="Commit inicial con el enunciado, las dependencias y los tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit inicial con el enunciado, las dependencias y los tests." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
