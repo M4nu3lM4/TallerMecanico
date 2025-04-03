@@ -160,7 +160,7 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial">
     <configuration name="ModeloTest.anadirPrecioMateriaLlamaTrabajosAnadirPrecioMaterial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
