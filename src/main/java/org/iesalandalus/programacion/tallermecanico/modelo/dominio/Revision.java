@@ -7,8 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Revision {
-    private static final float PRECIO_HORA = 30;
-    private static final float PRECIO_DIA = 10;
+    private static final float PRECIO_HORA = 30f;
+    private static final float PRECIO_DIA = 10f;
     private static final float PRECIO_MATERIAL = 1.5f;
     static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private LocalDate fechaInicio;
@@ -31,12 +31,12 @@ public class Revision {
 
     public Revision(Revision revision){
         Objects.requireNonNull(revision,"La revisión no puede ser nula.");
-        this.cliente = new Cliente(revision.cliente);
-        this.setVehiculo(revision.vehiculo);
-        this.setFechaInicio(revision.fechaInicio);
-        this.setFechaFin(revision.fechaFin);
-        this.horas = revision.getHoras();
-        this.precioMaterial = revision.precioMaterial;
+        cliente = new Cliente(revision.cliente);
+        vehiculo = revision.vehiculo;
+        fechaInicio = revision.fechaInicio;
+        fechaFin = revision.fechaFin;
+        horas = revision.horas;
+        precioMaterial = revision.precioMaterial;
     }
 
     public Cliente getCliente() {
@@ -77,6 +77,7 @@ public class Revision {
     }
 
     public void setFechaFin(LocalDate fechaFin) {
+        Objects.requireNonNull(fechaFin,"La fecha de fin no puede ser nula.");
 
         if (fechaFin.isAfter(LocalDate.now())){
             throw new IllegalArgumentException("La fecha de fin no puede ser futura.");
@@ -146,10 +147,9 @@ public class Revision {
     }
 
     public float getPrecio() {
-        if (!estaCerrada()) {
-            return 0;
-        }
-        return (getDias() * PRECIO_DIA) + (horas * PRECIO_HORA) + (precioMaterial * PRECIO_MATERIAL);
+        float precioFijo = PRECIO_DIA * getDias() + PRECIO_HORA * getHoras();
+        float precioEspecifico = PRECIO_MATERIAL * precioMaterial;
+        return precioEspecifico + precioFijo;
     }
 
     @Override
