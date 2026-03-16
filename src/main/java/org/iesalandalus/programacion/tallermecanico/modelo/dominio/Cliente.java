@@ -79,7 +79,7 @@ public class Cliente {
     }
 
     public static Cliente get(String dni){
-        return new Cliente("José Ramon",dni,"823848938");
+        return new Cliente("Patricio Estrella",dni,"950111111");
     }
 
     @Override
