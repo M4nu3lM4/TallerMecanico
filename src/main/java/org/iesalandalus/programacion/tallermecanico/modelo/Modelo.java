@@ -22,9 +22,9 @@ public class Modelo {
     }
 
     public void comenzar(){
-        this.clientes = new Clientes();
-        this.vehiculos = new Vehiculos();
-        this.revisiones = new Revisiones();
+        clientes = new Clientes();
+        vehiculos = new Vehiculos();
+        revisiones = new Revisiones();
     }
 
     public void terminar(){
