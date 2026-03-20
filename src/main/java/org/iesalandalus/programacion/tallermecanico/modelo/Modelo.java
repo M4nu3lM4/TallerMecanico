@@ -66,52 +66,75 @@ public class Modelo {
         return revisionEncontrada != null ? new Revision(revisionEncontrada) : null;
     }
 
-    public Cliente modificar(Cliente cliente,String nombre,String telefono){
+    public Cliente modificar(Cliente cliente,String nombre,String telefono) throws TallerMecanicoExcepcion {
+
+        return clientes.modificar(cliente,nombre,telefono);
 
     }
 
-    public Revision anadirHoras(Revision revision, int horas){
+    public Revision anadirHoras(Revision revision, int horas) throws TallerMecanicoExcepcion {
+
+        return revisiones.anadirHoras(revision,horas);
 
     }
 
-    public Revision anadirPrecioMaterial(Revision revision, int precioMaterial){
+    public Revision anadirPrecioMaterial(Revision revision, float precioMaterial) throws TallerMecanicoExcepcion {
+
+        return revisiones.anadirPrecioMaterial(revision,precioMaterial);
 
     }
 
-    public Revision cerrar(Revision revision, LocalDate fechaFin){
+    public Revision cerrar(Revision revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
+
+        return revisiones.cerrar(revision, fechaFin);
 
     }
 
-    public void borrar(Cliente cliente){
+    public void borrar(Cliente cliente) throws TallerMecanicoExcepcion {
 
+        List<Revision> revisionesClientes = revisiones.get(cliente);
+        for (Revision revision : revisionesClientes){
+            revisiones.borrar(revision);
+        }
+        clientes.borrar(cliente);
     }
 
-    public void borrar(Vehiculo vehiculo){
+    public void borrar(Vehiculo vehiculo) throws TallerMecanicoExcepcion{
 
+        List<Revision> revisionesVehiculos = revisiones.get(vehiculo);
+        for (Revision revision : revisionesVehiculos){
+            revisiones.borrar(revision);
+        }
+        vehiculos.borrar(vehiculo);
     }
 
-    public void borrar(Revision revision){
-
+    public void borrar(Revision revision) throws TallerMecanicoExcepcion {
+        revisiones.borrar(revision);
     }
 
     public List<Cliente> getClientes(){
 
+        List<Cliente> listaClientes = clientes.get();
+        return listaClientes.stream().map(Cliente::new).toList();
     }
 
     public List<Vehiculo> getVehiculos(){
-
+        return vehiculos.get();
     }
 
     public List<Revision> getRevisiones(){
-
+        List<Revision> listaRevisiones = revisiones.get();
+        return  listaRevisiones.stream().map(Revision::new).toList();
     }
 
     public List<Revision> getRevisiones(Cliente cliente){
-
+        List<Revision> listaRevisiones = revisiones.get(cliente);
+        return listaRevisiones.stream().map(Revision::new).toList();
     }
 
     public List<Revision> getRevisiones(Vehiculo vehiculo){
-
+        List<Revision> listaRevisiones = revisiones.get(vehiculo);
+        return listaRevisiones.stream().map(Revision::new).toList();
     }
 
 
