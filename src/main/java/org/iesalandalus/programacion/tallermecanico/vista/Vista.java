@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.vista;
 
+import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
+import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
@@ -14,6 +16,8 @@ public class Vista {
 
     public void setControlador(Controlador controlador) {
         Objects.requireNonNull(controlador,"El controlador no puede ser nulo.");
+
+        this.controlador = controlador;
     }
 
     public void comenzar(){
@@ -58,20 +62,20 @@ public class Vista {
         }
     }
 
-    private void insertarCliente(){
+    private void insertarCliente()throws TallerMecanicoExcepcion {
         Consola.mostrarCabecera("Insertar Cliente: ");
         controlador.insertar(Consola.leerCliente());
         System.out.println("Cliente insertado.");
 
     }
 
-    private void insertarVehiculo(){
+    private void insertarVehiculo()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Insertar Vehículo: ");
         controlador.insertar(Consola.leerVehiculo());
         System.out.println("Vehículo insertado.");
     }
 
-    private void insertarRevision(){
+    private void insertarRevision()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Insertar Revision: ");
         controlador.insertar(Consola.leerRevision());
         System.out.println("Revisión insertado.");
@@ -96,13 +100,13 @@ public class Vista {
 
     }
 
-    private void modificarCliente(){
+    private void modificarCliente()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Modificar Cliente: ");
         controlador.modificar(Consola.leerClienteDni(),Consola.leerNuevoNombre(),Consola.leerNuevoTelefono());
         System.out.println("Cliente modificado.");
     }
 
-    private void anadirHoras(){
+    private void anadirHoras()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Añadir Horas: ");
         Revision revision = Consola.leerRevision();
         int horas = Consola.leerHoras();
@@ -110,7 +114,7 @@ public class Vista {
         System.out.println("Horas añadidas correctamente.");
     }
 
-    private void anadirPrecioMaterial(){
+    private void anadirPrecioMaterial()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Añadir PrecioMaterial: ");
         Revision revision = Consola.leerRevision();
         float precioMaterial = Consola.leerPrecioMaterial();
@@ -118,13 +122,13 @@ public class Vista {
         System.out.println("Precio de material añadido correctamente.");
     }
 
-    private void cerrarRevision(){
+    private void cerrarRevision()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Cerrar Revisión: ");
         controlador.cerrar(Consola.leerRevision(),Consola.leerFechaCierre());
         System.out.println("Revisión cerrada correctamente.");
     }
 
-    private void borrarCliente(){
+    private void borrarCliente()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Borrar Cliente: ");
         Cliente cliente = Consola.leerCliente();
         controlador.borrar(cliente);
@@ -132,14 +136,14 @@ public class Vista {
 
     }
 
-    private void borrarVehiculo(){
+    private void borrarVehiculo()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Borrar Vehiculo: ");
         Vehiculo vehiculo = Consola.leerVehiculo();
         controlador.borrar(vehiculo);
         System.out.println("Vehiculo borrado correctamente.");
     }
 
-    private void borrarRevision(){
+    private void borrarRevision()throws TallerMecanicoExcepcion{
         Consola.mostrarCabecera("Borrar Revisión: ");
         Revision revision = Consola.leerRevision();
         controlador.borrar(revision);
@@ -160,7 +164,7 @@ public class Vista {
 
     private void listarVehiculos(){
         Consola.mostrarCabecera("Listar Vehiculos: ");
-        List<Vehiculo> vehiculos = controlador.getVehiculo();
+        List<Vehiculo> vehiculos = controlador.getVehiculos();
         if (vehiculos.isEmpty()){
             System.out.println("No hay vehículos registrados.");
         }else {
