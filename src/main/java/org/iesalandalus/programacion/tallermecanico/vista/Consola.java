@@ -11,7 +11,7 @@ import java.time.format.DateTimeParseException;
 
 public class Consola {
 
-    private static final String CADENA_FORMATO_FECHA = "dd/mm/yyyy";
+    private static final String CADENA_FORMATO_FECHA = "dd/MM/yyyy";
 
     private Consola(){}
 
@@ -29,17 +29,17 @@ public class Consola {
     }
 
     private static float leerReal(String mensaje) {
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         return Entrada.real();
     }
 
     private static int leerEntero(String mensaje) {
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         return Entrada.entero();
     }
 
     private static String leerCadena(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje);
         return Entrada.cadena();
     }
 
@@ -49,7 +49,7 @@ public class Consola {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
         do {
             try {
-                System.out.println(mensaje + " (" + CADENA_FORMATO_FECHA + "):");
+                System.out.print(mensaje + " (" + CADENA_FORMATO_FECHA + "):");
                 String fechaString = Entrada.cadena();
                 fecha = LocalDate.parse(fechaString, formatter);
             } catch (DateTimeParseException e) {
@@ -95,7 +95,7 @@ public class Consola {
     public static Vehiculo leerVehiculo(){
         String marca = leerCadena("Introduce la marca del vehículo: ");
         String modelo = leerCadena("Introduce el modelo del vehículo: ");
-        String matricula = leerCadena("Introduce laa matrícula del vehículo: ");
+        String matricula = leerCadena("Introduce la matrícula del vehículo: ");
         return new Vehiculo(marca,modelo,matricula);
     }
 
@@ -109,8 +109,7 @@ public class Consola {
         Cliente cliente = new Cliente(leerClienteDni());
         Vehiculo vehiculo = leerVehiculo();
         LocalDate fecha = leerFechaCierre();
-        int horas = leerHoras();
-        float precio = leerPrecioMaterial();
+
         return new Revision(cliente,vehiculo,fecha);
     }
 
@@ -124,7 +123,7 @@ public class Consola {
     }
 
     public static LocalDate leerFechaCierre(){
-        LocalDate fecha = leerFecha("Introduce una fecha de cierre (" +CADENA_FORMATO_FECHA+ "): ");
+        LocalDate fecha = leerFecha("Introduce una fecha de cierre");
         System.out.println("Fecha ingresada: "+ fecha.format(DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA)));
         return fecha;
     }

@@ -17,14 +17,14 @@ public class Modelo {
     private Revisiones revisiones;
 
 
-    public void Modelo(){
+    public Modelo(){
         comenzar();
     }
 
     public void comenzar(){
-        clientes = new Clientes();
-        vehiculos = new Vehiculos();
-        revisiones = new Revisiones();
+        this.clientes = new Clientes();
+        this.vehiculos = new Vehiculos();
+        this.revisiones = new Revisiones();
     }
 
     public void terminar(){

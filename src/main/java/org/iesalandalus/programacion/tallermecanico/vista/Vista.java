@@ -213,6 +213,6 @@ public class Vista {
     }
 
     private void salir(){
-
+        System.out.print("Hasta luego ¡Gracias por utilizar nuestra aplicación!");
     }
 }
