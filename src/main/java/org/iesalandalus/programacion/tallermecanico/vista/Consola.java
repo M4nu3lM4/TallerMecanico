@@ -107,9 +107,10 @@ public class Consola {
 
     public static Revision leerRevision(){
         Cliente cliente = new Cliente(leerClienteDni());
-        Vehiculo vehiculo = leerVehiculo();
-        LocalDate fecha = leerFechaCierre();
-
+        Vehiculo vehiculo = leerVehiculoMatricula();
+        LocalDate fecha = leerFecha("Introduce la fecha de la revisión");
+        int horas = leerHoras();
+        float precioMaterial = leerPrecioMaterial();
         return new Revision(cliente,vehiculo,fecha);
     }
 
@@ -121,6 +122,7 @@ public class Consola {
     public static float leerPrecioMaterial(){
         return leerReal("Introduce un precio: ");
     }
+
 
     public static LocalDate leerFechaCierre(){
         LocalDate fecha = leerFecha("Introduce una fecha de cierre");

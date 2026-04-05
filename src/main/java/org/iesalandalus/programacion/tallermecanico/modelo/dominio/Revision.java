@@ -111,7 +111,7 @@ public class Revision {
         if (fechaFin.isBefore(fechaInicio)){
             throw new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio.");
         }
-        this.fechaFin = fechaFin;
+
         setFechaFin(fechaFin);
     }
 
@@ -153,11 +153,13 @@ public class Revision {
     }
 
     @Override
-    public boolean equals (Object o) {
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Revision revision = (Revision) o;
-        return horas == revision.horas && Objects.equals(fechaInicio, revision.fechaInicio) && Objects.equals(vehiculo, revision.vehiculo) && Objects.equals(cliente, revision.cliente);
+        return Objects.equals(cliente, revision.cliente)
+                && Objects.equals(vehiculo, revision.vehiculo)
+                && Objects.equals(fechaInicio, revision.fechaInicio);
     }
 
     @Override

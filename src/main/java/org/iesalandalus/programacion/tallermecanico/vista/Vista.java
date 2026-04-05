@@ -83,13 +83,13 @@ public class Vista {
 
     private void buscarCliente(){
         Consola.mostrarCabecera("Buscar Cliente: ");
-        Cliente cliente = controlador.buscar(Consola.leerCliente());
+        Cliente cliente = controlador.buscar(Consola.leerClienteDni());
         System.out.println(cliente != null ? cliente :"No existe ningún cliente con dicho DNI.");
     }
 
     private void buscarVehiculo(){
         Consola.mostrarCabecera("Buscar Vehiculo: ");
-        Vehiculo vehiculo = controlador.buscar(Consola.leerVehiculo());
+        Vehiculo vehiculo = controlador.buscar(Consola.leerVehiculoMatricula());
         System.out.println(vehiculo != null ? vehiculo : "No existe ningún vehiculo con dicha matrícula.");
     }
 

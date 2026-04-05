@@ -43,13 +43,18 @@ public class Modelo {
     }
 
     public void insertar(Revision revision) throws TallerMecanicoExcepcion {
-        Cliente cliente = buscar(revision.getCliente());
-        Vehiculo vehiculo = buscar(revision.getVehiculo());
-        if (cliente != null && vehiculo != null){
-            revisiones.insertar(new Revision(revision));
-        } else {
-            return;
+        Cliente cliente = clientes.buscar(revision.getCliente());
+        Vehiculo vehiculo = vehiculos.buscar(revision.getVehiculo());
+
+        if (cliente == null) {
+            throw new TallerMecanicoExcepcion("No existe el cliente de la revisión.");
         }
+        if (vehiculo == null) {
+            throw new TallerMecanicoExcepcion("No existe el vehículo de la revisión.");
+        }
+
+
+        revisiones.insertar(new Revision(cliente, vehiculo, revision.getFechaInicio()));
     }
 
     public Cliente buscar(Cliente cliente){
