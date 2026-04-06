@@ -109,8 +109,7 @@ public class Consola {
         Cliente cliente = new Cliente(leerClienteDni());
         Vehiculo vehiculo = leerVehiculoMatricula();
         LocalDate fecha = leerFecha("Introduce la fecha de la revisión");
-        int horas = leerHoras();
-        float precioMaterial = leerPrecioMaterial();
+
         return new Revision(cliente,vehiculo,fecha);
     }
 
