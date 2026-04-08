@@ -17,12 +17,12 @@ public class Consola {
 
     public static void mostrarCabecera(String mensaje){
         System.out.println(mensaje);
-        System.out.println("-----------------");
+        System.out.println("-".repeat(mensaje.length()));
 
     }
 
     public static void mostrarMenu(){
-        mostrarCabecera("Gestión de revisiones - Menu principal");
+        mostrarCabecera("Gestión de Taller Mecánico");
         for (Opcion opcion : Opcion.values()){
             System.out.println(opcion);
         }
@@ -114,12 +114,12 @@ public class Consola {
     }
 
     public static int leerHoras(){
-      return leerEntero("Introduce un número de horas: ");
+      return leerEntero("Introduce un número de horas a añadir: ");
 
     }
 
     public static float leerPrecioMaterial(){
-        return leerReal("Introduce un precio: ");
+        return leerReal("Introduce un precio de material a añadir: ");
     }
 
 

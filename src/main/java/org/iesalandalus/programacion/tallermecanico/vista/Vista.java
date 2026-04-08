@@ -63,51 +63,51 @@ public class Vista {
     }
 
     private void insertarCliente()throws TallerMecanicoExcepcion {
-        Consola.mostrarCabecera("Insertar Cliente: ");
+        Consola.mostrarCabecera("Insertar Cliente:");
         controlador.insertar(Consola.leerCliente());
         System.out.println("Cliente insertado.");
 
     }
 
     private void insertarVehiculo()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Insertar Vehículo: ");
+        Consola.mostrarCabecera("Insertar Vehículo:");
         controlador.insertar(Consola.leerVehiculo());
         System.out.println("Vehículo insertado.");
     }
 
     private void insertarRevision()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Insertar Revision: ");
+        Consola.mostrarCabecera("Insertar Revision:");
         controlador.insertar(Consola.leerRevision());
         System.out.println("Revisión insertada.");
     }
 
     private void buscarCliente(){
-        Consola.mostrarCabecera("Buscar Cliente: ");
+        Consola.mostrarCabecera("Buscar Cliente:");
         Cliente cliente = controlador.buscar(Consola.leerClienteDni());
         System.out.println(cliente != null ? cliente :"No existe ningún cliente con dicho DNI.");
     }
 
     private void buscarVehiculo(){
-        Consola.mostrarCabecera("Buscar Vehiculo: ");
+        Consola.mostrarCabecera("Buscar Vehiculo:");
         Vehiculo vehiculo = controlador.buscar(Consola.leerVehiculoMatricula());
         System.out.println(vehiculo != null ? vehiculo : "No existe ningún vehiculo con dicha matrícula.");
     }
 
     private void buscarRevision(){
-        Consola.mostrarCabecera("Buscar Revision: ");
+        Consola.mostrarCabecera("Buscar Revision:");
         Revision revision = controlador.buscar(Consola.leerRevision());
         System.out.println(revision != null ? revision : "No existe ninguna revisión.");
 
     }
 
     private void modificarCliente()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Modificar Cliente: ");
+        Consola.mostrarCabecera("Modificar Cliente:");
         controlador.modificar(Consola.leerClienteDni(),Consola.leerNuevoNombre(),Consola.leerNuevoTelefono());
         System.out.println("Cliente modificado.");
     }
 
     private void anadirHoras()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Añadir Horas: ");
+        Consola.mostrarCabecera("Añadir Horas:");
         Revision revision = Consola.leerRevision();
         int horas = Consola.leerHoras();
         controlador.anadirHoras(revision, horas);
@@ -115,7 +115,7 @@ public class Vista {
     }
 
     private void anadirPrecioMaterial()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Añadir PrecioMaterial: ");
+        Consola.mostrarCabecera("Añadir PrecioMaterial:");
         Revision revision = Consola.leerRevision();
         float precioMaterial = Consola.leerPrecioMaterial();
         controlador.anadirPrecioMaterial(revision, precioMaterial);
@@ -123,13 +123,13 @@ public class Vista {
     }
 
     private void cerrarRevision()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Cerrar Revisión: ");
+        Consola.mostrarCabecera("Cerrar Revisión:");
         controlador.cerrar(Consola.leerRevision(),Consola.leerFechaCierre());
         System.out.println("Revisión cerrada correctamente.");
     }
 
     private void borrarCliente()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Borrar Cliente: ");
+        Consola.mostrarCabecera("Borrar Cliente:");
         Cliente cliente = Consola.leerCliente();
         controlador.borrar(cliente);
         System.out.println("Cliente borrado correctamente.");
@@ -137,21 +137,21 @@ public class Vista {
     }
 
     private void borrarVehiculo()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Borrar Vehiculo: ");
+        Consola.mostrarCabecera("Borrar Vehiculo:");
         Vehiculo vehiculo = Consola.leerVehiculo();
         controlador.borrar(vehiculo);
         System.out.println("Vehiculo borrado correctamente.");
     }
 
     private void borrarRevision()throws TallerMecanicoExcepcion{
-        Consola.mostrarCabecera("Borrar Revisión: ");
+        Consola.mostrarCabecera("Borrar Revisión:");
         Revision revision = Consola.leerRevision();
         controlador.borrar(revision);
-        System.out.println("Revisión borrada correctamente");
+        System.out.println("Revisión borrada correctamente.");
     }
 
     private void listarClientes(){
-        Consola.mostrarCabecera("Listar Clientes: ");
+        Consola.mostrarCabecera("Listar Clientes:");
         List<Cliente> clientes = controlador.getClientes();
         if (clientes.isEmpty()){
             System.out.println("No hay clientes registrados.");
@@ -163,7 +163,7 @@ public class Vista {
     }
 
     private void listarVehiculos(){
-        Consola.mostrarCabecera("Listar Vehiculos: ");
+        Consola.mostrarCabecera("Listar Vehiculos:");
         List<Vehiculo> vehiculos = controlador.getVehiculos();
         if (vehiculos.isEmpty()){
             System.out.println("No hay vehículos registrados.");
@@ -175,7 +175,7 @@ public class Vista {
     }
 
     private void listarRevisiones(){
-        Consola.mostrarCabecera("Listar Revisiones: ");
+        Consola.mostrarCabecera("Listar Revisiones:");
         List<Revision> revisiones = controlador.getRevisiones();
         if (revisiones.isEmpty()){
             System.out.println("No hay revisiones registradas.");
@@ -187,7 +187,7 @@ public class Vista {
     }
 
     private void listarRevisionesCliente(){
-        Consola.mostrarCabecera("Listar revisiones por cliente: ");
+        Consola.mostrarCabecera("Listar revisiones por cliente:");
         Cliente cliente = Consola.leerCliente();
         List<Revision> revisiones = controlador.getRevisiones(cliente);
         if (revisiones.isEmpty()){
@@ -200,11 +200,11 @@ public class Vista {
     }
 
     private void listarRevisionesVehiculos(){
-        Consola.mostrarCabecera("Listar revisiones por vehiculo: ");
+        Consola.mostrarCabecera("Listar revisiones por vehiculo:");
         Vehiculo vehiculo = Consola.leerVehiculo();
         List<Revision> revisiones = controlador.getRevisiones(vehiculo);
         if (revisiones.isEmpty()){
-            System.out.println("No hay revisiones registradas para ese vehiculo");
+            System.out.println("No hay revisiones registradas para ese vehiculo.");
         }else {
             for (Revision revision : revisiones){
                 System.out.println(revision);
