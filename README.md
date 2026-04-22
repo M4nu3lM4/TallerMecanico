@@ -1,10 +1,10 @@
 # Tarea: Taller mecánico
 ## Profesor: José Ramón Jiménez Reyes
-## Alumno:
+## Alumno: Manuel Martínez Alcalá
 
 Al cliente le ha gustado bastante la aplicación, pero nos comenta algunas mejoras que necesita la anterior versión y nuevas funcionalidades que le gustaría que tuviese. Todo ello lo abordaremos en este **segundo sprint**.
 
-Nos comenta que el taller realiza dos tipos de trabajos:
+Nos comenta que el taller realiza dos tipos  de trabajos:
 - **Revisiones**: Son las revisiones rutinarias que se realizan antes de pasar la ITV o revisiones de seguridad. A estos trabajos solo se le pueden añadir horas, dependiendo de lo que los mecánicos tarden en realizarlos. Si en la revisión se detecta que hay que cambiar algo, habría que cerrar la revisión y abrir un nuevo trabajo mecánico.
 - **Mecánicos**: Son los trabajos en los que se sustituyen piezas defectuosas, se corrigen errores de funcionamiento, etc. A este tipo de trabajos los mecánicos pueden, además de añadirles horas, añadirles precio del material que reemplazan.
 
