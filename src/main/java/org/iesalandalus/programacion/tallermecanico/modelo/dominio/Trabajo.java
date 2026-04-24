@@ -24,7 +24,7 @@ public abstract class Trabajo {
     }
 
     protected Trabajo(Trabajo trabajo){
-        Objects.requireNonNull(trabajo,"EL trabajo no puede ser nulo.");
+        Objects.requireNonNull(trabajo,"El trabajo no puede ser nulo.");
         this.cliente = new Cliente(cliente);
         vehiculo = trabajo.vehiculo;
         fechaInicio = trabajo.fechaInicio;
@@ -121,7 +121,7 @@ public abstract class Trabajo {
         Objects.requireNonNull(fechaFin, "La fecha de fin no puede ser nula.");
 
         if (estaCerrado()) {
-            throw new TallerMecanicoExcepcion("La revisión ya está cerrada.");
+            throw new TallerMecanicoExcepcion("El trabajo ya está cerrado.");
         }
 
         if (fechaFin.isAfter(LocalDate.now())) {
