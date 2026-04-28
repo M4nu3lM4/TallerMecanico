@@ -1,11 +1,13 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.negocio;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.FuenteDatosMemoria;
+
 public enum FabricaFuenteDatos {
 
     MEMORIA {
         @Override
         public IFuenteDatos crear() {
-            return null;
+            return new FuenteDatosMemoria();
         }
     };
 

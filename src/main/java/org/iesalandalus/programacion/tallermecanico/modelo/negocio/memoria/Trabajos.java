@@ -5,13 +5,14 @@ import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Trabajos implements org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos {
+public class Trabajos implements ITrabajos {
     private final List<Trabajo> coleccionTrabajos;
 
     public Trabajos(){
@@ -77,35 +78,34 @@ public class Trabajos implements org.iesalandalus.programacion.tallermecanico.mo
         }
     }
 
-    private Trabajo getTrabajoAbierto(Vehiculo vehiculo) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(vehiculo,"No se puede operar sobre un vehículo nulo.");
+    @Override
+    public Trabajo anadirHoras(Trabajo trabajo, int horas) throws TallerMecanicoExcepcion {
+        if (trabajo == null) {
+            throw new NullPointerException("No puedo añadir horas a un trabajo nulo.");
+        }
+        Trabajo trabajoExistente = getTrabajoAbierto(trabajo.getVehiculo());
+        if (trabajoExistente == null) {
+            throw new TallerMecanicoExcepcion("No existe ningún trabajo abierto para dicho vehículo.");
+        }
+        trabajoExistente.anadirHoras(horas);
+        return trabajoExistente;
+    }
 
-        for (Trabajo trabajo : coleccionTrabajos){
-            if (!trabajo.estaCerrado()&& trabajo.getVehiculo().equals(vehiculo)){
-                return trabajo;
+    private Trabajo getTrabajoAbierto(Vehiculo vehiculo){
+        Objects.requireNonNull(vehiculo,"No puedo operar sobre un vehículo nulo.");
+        for (Trabajo t : coleccionTrabajos) {
+            if (!t.estaCerrado() && t.getVehiculo().equals(vehiculo)) {
+                return t;
             }
         }
         return null;
     }
 
     @Override
-    public Trabajo anadirHoras(Trabajo trabajo, int horas) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(trabajo,"No puedo añadir horas a un trabajo nulo.");
-
-        Trabajo trabajoExistente = getTrabajoAbierto(trabajo.getVehiculo());
-
-        if (trabajoExistente == null){
-            throw new TallerMecanicoExcepcion("No existe ningún trabajo abierto para dicho vehículo.");
-        }
-        trabajoExistente.anadirHoras(horas);
-
-        return trabajoExistente;
-
-    }
-    @Override
     public Trabajo anadirPrecioMaterial(Trabajo trabajo, float precioMaterial) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(trabajo,"No puedo añadir precio del material a un trabajo nulo.");
-
+        if (trabajo == null) {
+            throw new NullPointerException("No puedo añadir precio del material a un trabajo nulo.");
+        }
         Trabajo trabajoExistente = getTrabajoAbierto(trabajo.getVehiculo());
         if (trabajoExistente == null) {
             throw new TallerMecanicoExcepcion("No existe ningún trabajo abierto para dicho vehículo.");
@@ -115,7 +115,6 @@ public class Trabajos implements org.iesalandalus.programacion.tallermecanico.mo
         }
         trabajoExistente.getPrecio();
         return trabajoExistente;
-
     }
 
     @Override
