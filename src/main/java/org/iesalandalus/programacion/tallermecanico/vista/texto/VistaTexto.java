@@ -80,7 +80,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     public Trabajo leerRevision () {
         Cliente cliente = leerClienteDni();
         Vehiculo vehiculo = leerVehiculoMatricula();
-        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio: ");
+        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio");
         return new Revision(cliente, vehiculo, fechaInicio);
     }
 
@@ -117,7 +117,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         if (exito) {
             System.out.println(texto);
         } else {
-            System.out.printf("ERROR: %s%n",evento);
+            System.out.printf("ERROR: %s%n", texto);
         }
     }
 

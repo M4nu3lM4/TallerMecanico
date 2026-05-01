@@ -53,6 +53,6 @@ public enum Evento {
 
     @Override
     public String toString () {
-        return texto;
+        return String.format("%s - %s", codigo, texto);
     }
 }
