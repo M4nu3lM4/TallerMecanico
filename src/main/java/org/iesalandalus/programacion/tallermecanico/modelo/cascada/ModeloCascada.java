@@ -57,10 +57,12 @@ public class ModeloCascada implements Modelo {
         Cliente cliente = buscar(trabajo.getCliente());
         Vehiculo vehiculo = buscar(trabajo.getVehiculo());
         if (cliente != null && vehiculo != null) {
-            if (trabajo instanceof Revision) {
-                trabajos.insertar(new Revision((Revision) trabajo));
-            } else if (trabajo instanceof Mecanico) {
-                trabajos.insertar(new Mecanico((Mecanico) trabajo));
+            if (trabajo instanceof Revision revision) {
+                Revision nuevaRevision = new Revision(cliente, vehiculo, revision.getFechaInicio());
+                trabajos.insertar(nuevaRevision);
+            } else if (trabajo instanceof Mecanico mecanico) {
+                Mecanico nuevoMecanico = new Mecanico(cliente, vehiculo, mecanico.getFechaInicio());
+                trabajos.insertar(nuevoMecanico);
             }
         }
     }
