@@ -46,7 +46,7 @@ public abstract class Trabajo {
 
     public static Trabajo get(Vehiculo vehiculo){
         Objects.requireNonNull(vehiculo,"El vehículo no puede ser nulo.");
-        return new Revision(new Cliente("Juan", "00000000X", "123456789"),vehiculo,LocalDate.now());
+        return new Revision(new Cliente("Juan", "00000000T", "123456789"),vehiculo,LocalDate.now());
     }
 
     public Cliente getCliente() {

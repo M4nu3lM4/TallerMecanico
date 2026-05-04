@@ -99,7 +99,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public int leerHoras () {
-        return Consola.leerEntero("Introduce las horas a añadir:");
+        return Consola.leerEntero("Introduce las horas a añadir: ");
     }
 
     @Override
