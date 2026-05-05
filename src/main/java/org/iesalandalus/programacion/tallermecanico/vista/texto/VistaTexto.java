@@ -109,7 +109,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public LocalDate leerFechaCierre () {
-        return Consola.leerFecha("Introduce la fecha de cierre: ");
+        return Consola.leerFecha("Introduce la fecha de cierre");
     }
 
     @Override
