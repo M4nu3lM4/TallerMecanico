@@ -1,11 +1,14 @@
 package org.iesalandalus.programacion.tallermecanico.controlador;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.FabricaModelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.cascada.ModeloCascada;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
+import org.iesalandalus.programacion.tallermecanico.vista.FabricaVista;
 import org.iesalandalus.programacion.tallermecanico.vista.Vista;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.ReceptorEventos;
@@ -18,12 +21,17 @@ import java.util.Objects;
 public class Controlador implements IControlador, ReceptorEventos {
     private Modelo modelo;
     private Vista vista;
+    private FabricaModelo fabricaModelo;
+    private FabricaVista fabricaVista;
+    private FabricaFuenteDatos fabricaFuenteDatos;
 
-    public Controlador(Modelo modelo, Vista vista) {
-        Objects.requireNonNull(modelo, "ERROR: El modelo no puede ser nulo.");
-        Objects.requireNonNull(vista, "ERROR: La vista no puede ser nula.");
-        this.modelo = modelo;
-        this.vista = vista;
+    public Controlador(FabricaModelo fabricaModelo, FabricaFuenteDatos fabricaFuenteDatos, FabricaVista fabricaVista) {
+        Objects.requireNonNull(fabricaModelo, "ERROR: La fabrica de modelo no puede ser nulo.");
+        Objects.requireNonNull(fabricaVista, "ERROR: La fabrica de vista no puede ser nula.");
+        Objects.requireNonNull(fabricaFuenteDatos,"ERROR: La fabrica de fuente de datos no puede ser nula");
+        this.fabricaModelo = fabricaModelo;
+        this.fabricaVista = fabricaVista;
+        this.fabricaFuenteDatos = fabricaFuenteDatos;
 
     }
 
