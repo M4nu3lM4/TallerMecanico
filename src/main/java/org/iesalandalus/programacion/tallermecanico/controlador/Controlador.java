@@ -29,9 +29,9 @@ public class Controlador implements IControlador, ReceptorEventos {
         Objects.requireNonNull(fabricaModelo, "ERROR: La fabrica de modelo no puede ser nulo.");
         Objects.requireNonNull(fabricaVista, "ERROR: La fabrica de vista no puede ser nula.");
         Objects.requireNonNull(fabricaFuenteDatos,"ERROR: La fabrica de fuente de datos no puede ser nula");
-        this.fabricaModelo = fabricaModelo;
-        this.fabricaVista = fabricaVista;
-        this.fabricaFuenteDatos = fabricaFuenteDatos;
+        modelo = fabricaModelo.crear(fabricaFuenteDatos);
+        vista = fabricaVista.crear();
+        vista.getGestorEventos().suscribir(this,Evento.values());
 
     }
 

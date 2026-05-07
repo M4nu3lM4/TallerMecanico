@@ -7,13 +7,16 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import static org.iesalandalus.programacion.tallermecanico.vista.texto.Consola.*;
 
 public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.vista.Vista {
     private GestorEventos gestorEventos = new GestorEventos(Evento.values());
+    private EnumMap<TipoTrabajo,Integer> estadisticas = new EnumMap<>(TipoTrabajo.class);
 
     @Override
     public GestorEventos getGestorEventos () {
@@ -112,6 +115,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         return Consola.leerFecha("Introduce la fecha de cierre");
     }
 
+
+    public LocalDate leerMes(){
+        return leerFecha("Pon la fecha.");
+    }
+
     @Override
     public void notificarResultado (Evento evento, String texto, boolean exito) {
         if (exito) {
@@ -188,5 +196,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         }else{
             System.out.println("No hay trabajos para este vehículo");
         }
+    }
+
+
+    public void mostrarEstadisticasMensuales(Map<TipoTrabajo,Integer> estadisticas){
+        Objects.requireNonNull(estadisticas,"Las estadisticas no pueden ser nulas.");
+        System.out.println(estadisticas);
     }
 }
