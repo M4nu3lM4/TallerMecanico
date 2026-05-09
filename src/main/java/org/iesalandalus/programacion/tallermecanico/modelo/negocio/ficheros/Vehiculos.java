@@ -25,11 +25,11 @@ public class Vehiculos implements IVehiculos {
     private static Vehiculos instancia;
     List<Vehiculo> coleccionVehiculos = new ArrayList<>();
 
-    public Vehiculos(){
+    Vehiculos(){
         coleccionVehiculos = new ArrayList<>();
     }
 
-    static Vehiculos getInstancia(){
+    public static Vehiculos getInstancia(){
         if (instancia == null){
             instancia = new Vehiculos();
         }

@@ -21,9 +21,7 @@ import java.util.Objects;
 public class Controlador implements IControlador, ReceptorEventos {
     private Modelo modelo;
     private Vista vista;
-    private FabricaModelo fabricaModelo;
-    private FabricaVista fabricaVista;
-    private FabricaFuenteDatos fabricaFuenteDatos;
+
 
     public Controlador(FabricaModelo fabricaModelo, FabricaFuenteDatos fabricaFuenteDatos, FabricaVista fabricaVista) {
         Objects.requireNonNull(fabricaModelo, "ERROR: La fabrica de modelo no puede ser nulo.");
@@ -38,14 +36,13 @@ public class Controlador implements IControlador, ReceptorEventos {
     @Override
     public void comenzar() {
         modelo.comenzar();
-        vista.getGestorEventos().suscribir(this, Evento.values());
         vista.comenzar();
     }
 
     @Override
-    public void terminar() {
-        modelo.terminar();
+    public void terminar() throws TallerMecanicoExcepcion {
         vista.terminar();
+        modelo.terminar();
     }
     @Override
     public void actualizar(Evento evento) {
@@ -71,6 +68,7 @@ public class Controlador implements IControlador, ReceptorEventos {
                 case LISTAR_TRABAJOS -> vista.mostrarTrabajos(modelo.getTrabajos());
                 case LISTAR_TRABAJOS_CLIENTE -> vista.mostrarTrabajosCliente(modelo.getTrabajos(vista.leerClienteDni()));
                 case LISTAR_TRABAJOS_VEHICULO -> vista.mostrarTrabajosVehiculo(modelo.getTrabajos(vista.leerVehiculoMatricula()));
+                case MOSTRAR_ESTADISTICAS_MENSUALES -> vista.mostrarEstadisticasMensuales(modelo.getEstadisticasMensuales(vista.leerMes()));
                 case SALIR -> terminar();
             }
             if (!resultado.isBlank()){

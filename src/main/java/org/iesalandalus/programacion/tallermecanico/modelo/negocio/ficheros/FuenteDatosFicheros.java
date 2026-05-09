@@ -5,7 +5,7 @@ import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IFuenteDatos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos;
 
-public class FuenteDatosMemoria implements IFuenteDatos {
+public class FuenteDatosFicheros implements IFuenteDatos {
 
     @Override
     public IClientes crearClientes(){

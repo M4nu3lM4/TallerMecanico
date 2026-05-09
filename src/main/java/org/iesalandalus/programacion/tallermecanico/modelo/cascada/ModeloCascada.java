@@ -13,30 +13,36 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+
+
 public class ModeloCascada implements Modelo {
 
     private IClientes clientes;
     private IVehiculos vehiculos;
     private ITrabajos trabajos;
-
+    private FabricaFuenteDatos fabricaFuenteDatos;
 
     public ModeloCascada(FabricaFuenteDatos fabricaFuenteDatos){
         Objects.requireNonNull(fabricaFuenteDatos,"La factoría de la fuente de datos no puede ser nula.");
-        IFuenteDatos fuenteDatos = fabricaFuenteDatos.crear();
-        clientes = fuenteDatos.crearClientes();
-        vehiculos = fuenteDatos.crearVehiculos();
-        trabajos = fuenteDatos.crearTrabajos();
+        this.fabricaFuenteDatos = fabricaFuenteDatos;
     }
 
     @Override
     public void comenzar(){
-        this.clientes = new Clientes();
-        this.vehiculos = new Vehiculos();
-        this.trabajos = new Trabajos();
+        IFuenteDatos fuenteDatos = fabricaFuenteDatos.crear();
+        this.clientes = fuenteDatos.crearClientes();
+        this.vehiculos = fuenteDatos.crearVehiculos();
+        this.trabajos = fuenteDatos.crearTrabajos();
+        clientes.comenzar();
+        vehiculos.comenzar();
+        trabajos.comenzar();
     }
 
     @Override
-    public void terminar(){
+    public void terminar() throws TallerMecanicoExcepcion {
+        clientes.terminar();
+        vehiculos.terminar();
+        trabajos.terminar();
         System.out.println("Modelo terminado.");
     }
 

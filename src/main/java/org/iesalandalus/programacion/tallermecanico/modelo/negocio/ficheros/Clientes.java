@@ -2,6 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -22,21 +23,20 @@ public class Clientes implements IClientes {
     private static final String DNI = "dni";
     private static final String TELEFONO = "telefono";
     private static Clientes instancia;
+    private final List<Cliente> coleccionClientes;
 
 
-    List<Cliente> coleccionClientes = new ArrayList<>();
 
-    private Clientes() {
+    Clientes() {
         coleccionClientes = new ArrayList<>();
     }
 
     @Override
     public List<Cliente> get() {
-        List<Cliente> nuevoCliente = coleccionClientes;
-        return coleccionClientes;
+        return new ArrayList<>(coleccionClientes);
     }
 
-    static Clientes getInstancia() {
+    public static Clientes getInstancia() {
         if (instancia == null) {
             instancia = new Clientes();
         }
