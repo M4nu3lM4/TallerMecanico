@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="">
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="terminado rama ficheros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datos/trabajos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/datos/trabajos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778502484679</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="terminado rama ficheros">
+      <option name="closed" value="true" />
+      <created>1778842108638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778842108638</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +346,8 @@
     <MESSAGE value="Generacion de estadisticas y comienzo de ordenacion" />
     <MESSAGE value="Comienzo de persistencia de datos" />
     <MESSAGE value="Sprint de ficheros terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint de ficheros terminado" />
+    <MESSAGE value="terminado rama ficheros" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado rama ficheros" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
