@@ -8,10 +8,7 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 import static org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento.*;
 import static org.iesalandalus.programacion.tallermecanico.vista.texto.Consola.*;
@@ -169,34 +166,46 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void mostrarClientes (List<Cliente> clientes) {
-        if (!clientes.isEmpty()) {
-            for (Cliente cliente : clientes) {
+        Objects.requireNonNull(clientes,"Los clientes no pueden se nulos.");
+        Consola.mostrarCabecera("Listado de clientes");
+        clientes.sort(Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni));
+        if (!clientes.isEmpty()){
+            for (Cliente cliente : clientes){
                 System.out.println(cliente);
             }
-        } else {
-            System.out.println("No hay ningún cliente.");
+        }else {
+            System.out.println("La lista esta vacía.");
         }
     }
 
     @Override
     public void mostrarVehiculos (List<Vehiculo> vehiculos) {
-        if (!vehiculos.isEmpty()) {
-            for (Vehiculo vehiculo : vehiculos) {
+        Objects.requireNonNull(vehiculos,"Los vehiculos no pueden se nulos.");
+        Consola.mostrarCabecera("Listado de vehículos");
+        vehiculos.sort(Comparator.comparing(Vehiculo::marca).thenComparing(Vehiculo::modelo).thenComparing(Vehiculo::matricula));
+        if (!vehiculos.isEmpty()){
+            for (Vehiculo vehiculo : vehiculos){
                 System.out.println(vehiculo);
             }
-        } else {
-            System.out.println("No hay ningún vehículo.");
+
+        }else {
+            System.out.println("La lista esta vacía.");
         }
     }
 
     @Override
     public void mostrarTrabajos (List<Trabajo> trabajos) {
-        if (!trabajos.isEmpty()) {
-            for (Trabajo trabajo : trabajos) {
+        Objects.requireNonNull(trabajos,"Los trabajos no pueden se nulos.");
+        Consola.mostrarCabecera("Listado de trabajos");
+        Comparator<Cliente> comparadorClientes = Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni);
+        trabajos.sort(Comparator.comparing(Trabajo::getFechaInicio).thenComparing(Trabajo::getCliente,comparadorClientes));
+        if (!trabajos.isEmpty()){
+            for (Trabajo trabajo : trabajos){
                 System.out.println(trabajo);
             }
-        } else {
-            System.out.println("No hay ningún trabajo.");
+
+        }else {
+            System.out.println("La lista esta vacía.");
         }
     }
 

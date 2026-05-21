@@ -63,7 +63,7 @@ public class Trabajos implements ITrabajos {
         return trabajosVehiculo;
     }
 
-    public static Trabajos getInstancia(){
+    static Trabajos getInstancia(){
         if (instancia == null){
             instancia = new Trabajos();
         }
