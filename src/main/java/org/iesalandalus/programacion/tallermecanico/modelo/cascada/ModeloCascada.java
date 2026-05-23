@@ -142,7 +142,11 @@ public class ModeloCascada implements Modelo {
 
     @Override
     public void borrar (Trabajo trabajo) throws TallerMecanicoExcepcion {
-        trabajos.borrar(trabajo);
+        Trabajo trabajoReal = trabajos.buscar(trabajo);
+        if (trabajoReal == null) {
+            throw new TallerMecanicoExcepcion("No existe ningún trabajo igual.");
+        }
+        trabajos.borrar(trabajoReal);
     }
 
     @Override

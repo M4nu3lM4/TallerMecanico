@@ -36,7 +36,7 @@ public class Clientes implements IClientes {
         return new ArrayList<>(coleccionClientes);
     }
 
-    static Clientes getInstancia() {
+    public static Clientes getInstancia() {
         if (instancia == null) {
             instancia = new Clientes();
         }

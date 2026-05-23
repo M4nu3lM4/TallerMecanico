@@ -160,7 +160,9 @@ public abstract class Trabajo {
     public boolean equals (Object o) {
         if (this == o) return true;
         if (!(o instanceof Trabajo trabajo)) return false;
-        return horas == trabajo.horas && Objects.equals(cliente, trabajo.cliente) && Objects.equals(vehiculo, trabajo.vehiculo) && Objects.equals(fechaInicio, trabajo.fechaInicio);
+        return Objects.equals(cliente, trabajo.cliente)
+                && Objects.equals(vehiculo, trabajo.vehiculo)
+                && Objects.equals(fechaInicio, trabajo.fechaInicio);
     }
 
     @Override

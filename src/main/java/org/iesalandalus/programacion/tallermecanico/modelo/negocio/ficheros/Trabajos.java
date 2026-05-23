@@ -63,7 +63,7 @@ public class Trabajos implements ITrabajos {
         return trabajosVehiculo;
     }
 
-    static Trabajos getInstancia(){
+    public static Trabajos getInstancia(){
         if (instancia == null){
             instancia = new Trabajos();
         }
@@ -155,12 +155,12 @@ public class Trabajos implements ITrabajos {
     @Override
     public Trabajo buscar(Trabajo trabajo) {
         Objects.requireNonNull(trabajo, "No se puede buscar un trabajo nulo.");
-        if (coleccionTrabajos.contains(trabajo)) {
-            int clientesIndex = coleccionTrabajos.indexOf(trabajo);
-            return coleccionTrabajos.get(clientesIndex);
-        } else {
-            return null;
+        for (Trabajo t : coleccionTrabajos) {
+            if (t.getVehiculo().equals(trabajo.getVehiculo())) {
+                return t;
+            }
         }
+        return null;
     }
 
     @Override

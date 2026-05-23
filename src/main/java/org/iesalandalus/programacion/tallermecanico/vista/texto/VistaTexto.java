@@ -166,9 +166,8 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void mostrarClientes (List<Cliente> clientes) {
-        Objects.requireNonNull(clientes,"Los clientes no pueden se nulos.");
-        Consola.mostrarCabecera("Listado de clientes");
-        clientes.sort(Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni));
+
+
         if (!clientes.isEmpty()){
             for (Cliente cliente : clientes){
                 System.out.println(cliente);
@@ -180,9 +179,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void mostrarVehiculos (List<Vehiculo> vehiculos) {
-        Objects.requireNonNull(vehiculos,"Los vehiculos no pueden se nulos.");
-        Consola.mostrarCabecera("Listado de vehículos");
-        vehiculos.sort(Comparator.comparing(Vehiculo::marca).thenComparing(Vehiculo::modelo).thenComparing(Vehiculo::matricula));
+
         if (!vehiculos.isEmpty()){
             for (Vehiculo vehiculo : vehiculos){
                 System.out.println(vehiculo);
@@ -195,10 +192,8 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void mostrarTrabajos (List<Trabajo> trabajos) {
-        Objects.requireNonNull(trabajos,"Los trabajos no pueden se nulos.");
-        Consola.mostrarCabecera("Listado de trabajos");
-        Comparator<Cliente> comparadorClientes = Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni);
-        trabajos.sort(Comparator.comparing(Trabajo::getFechaInicio).thenComparing(Trabajo::getCliente,comparadorClientes));
+
+
         if (!trabajos.isEmpty()){
             for (Trabajo trabajo : trabajos){
                 System.out.println(trabajo);

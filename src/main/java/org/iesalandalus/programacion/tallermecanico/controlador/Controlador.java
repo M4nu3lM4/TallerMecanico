@@ -62,7 +62,7 @@ public class Controlador implements IControlador, ReceptorEventos {
                 case CERRAR_TRABAJO -> { modelo.cerrar(vista.leerTrabajoVehiculo(), vista.leerFechaCierre()); resultado = "Trabajo cerrado correctamente"; }
                 case BORRAR_CLIENTE -> { modelo.borrar(vista.leerClienteDni()); resultado = "Cliente eliminado correctamente"; }
                 case BORRAR_VEHICULO -> { modelo.borrar(vista.leerVehiculoMatricula()); resultado = "Vehiculo eliminado correctamente"; }
-                case BORRAR_TRABAJO -> { modelo.borrar(vista.leerRevision()); resultado = "Trabajo eliminado correctamente"; }
+                case BORRAR_TRABAJO -> { modelo.borrar(vista.leerTrabajoVehiculo()); resultado = "Trabajo eliminado correctamente"; }
                 case LISTAR_CLIENTES -> vista.mostrarClientes(modelo.getClientes());
                 case LISTAR_VEHICULOS -> vista.mostrarVehiculos(modelo.getVehiculos());
                 case LISTAR_TRABAJOS -> vista.mostrarTrabajos(modelo.getTrabajos());
