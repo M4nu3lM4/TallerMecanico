@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <trabajos>
-    <trabajo cliente="11223344B" fechaFin="07/03/2024" fechaInicio="01/03/2024" horas="10" tipo="revision" vehiculo="3333DDD"/>
+    <trabajo cliente="11223344B" fechaFin="16/03/2024" fechaInicio="10/03/2024" horas="5" tipo="mecanico" vehiculo="1234BCD"/>
+    <trabajo cliente="11223344B" fechaFin="26/03/2024" fechaInicio="20/03/2024" horas="15" tipo="revision" vehiculo="3333DDD"/>
 </trabajos>
